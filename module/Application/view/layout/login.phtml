@@ -1,0 +1,75 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+        <?php echo $this->headTitle('LOAN APP '. $this->translate('DEMO'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        
+        echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')?>
+
+        <!-- Le styles -->
+        <?php
+        
+        echo $this->headLink(array(
+            'rel' => 'shortcut icon',
+            'type' => 'image/vnd.microsoft.icon',
+            'href' => $this->basePath() . '/img/favicon.ico'
+        ))
+            ->prependStylesheet($this->basePath('css/slim.css'))
+            ->prependStylesheet($this->basePath('lib/Ionicons/css/ionicons.css'))
+            ->prependStylesheet($this->basePath('lib/font-awesome/css/font-awesome.css'))?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+//         ->prependFile($this->basePath('js/slim.js'))
+            ->prependFile($this->basePath('lib/bootstrap/js/bootstrap.js'))
+            ->prependFile($this->basePath('lib/popper.js/js/popper.js'))
+            ->prependFile($this->basePath('lib/jquery/js/jquery.js'))
+//             ->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array(
+//             'conditional' => 'lt IE 9'
+//         ))
+//             ->prependFile($this->basePath('lib/popper.js/js/popper.js'), 'text/javascript', array(
+//             'conditional' => 'lt IE 9'
+//         ));
+        ?>
+
+    </head>
+<body>
+	<div class="d-md-flex flex-row-reverse">
+		<div class="signin-right">
+ <?php echo $this->content; ?>
+			
+
+		</div>
+		<!-- signin-right -->
+		<div class="signin-left">
+			<div class="signin-box">
+				<h2 class="slim-logo">
+					<a href="index.html">Loan App<span>.</span></a>
+				</h2>
+
+				<!-- 				<p>We are excited to launch our new company and product Slim. After -->
+				<!-- 					being featured in too many magazines to mention and having created -->
+				<!-- 					an online stir, we know that ThemePixels is going to be big. We -->
+				<!-- 					also hope to win Startup Fictional Business of the Year this year.</p> -->
+
+				<!-- 				<p>Browse our site and see for yourself why you need Slim.</p> -->
+
+				<p>
+					<a href="" class="btn btn-outline-secondary pd-x-25">Learn More</a>
+				</p>
+
+				<p class="tx-12">&copy; Copyright <?php  echo date("Y"); ?>. All Rights Reserved.</p>
+			</div>
+		</div>
+		<!-- signin-left -->
+	</div>
+	<!-- d-flex -->
+    
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>
